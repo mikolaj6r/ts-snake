@@ -1,0 +1,87 @@
+@import 'base';
+
+*{
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+#canvas{
+    background: #fff;
+    border: 1px solid #000;
+}
+
+.main{
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    background: #F5F5F5;
+    min-height: 100vh;
+}
+.main__article{
+    flex-basis: 400px;
+    flex-grow: 0;
+    position: relative;
+    padding: 16px;
+}
+.main__aside{
+    flex-grow: 1;
+    padding: 16px;
+}
+#canvasOverlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate3d(-50%, -50%, 0);
+    margin: 0;
+    text-align: justify;
+    text-transform: uppercase;
+    color: black;
+}
+
+label {
+    display: block;
+    margin-top: 20px;
+}
+
+input {
+    clear: both;
+    display: inline-block;
+}
+
+input:after {
+    content: "";
+    position: relative;
+    clear: both;
+}
+
+#ustawienia {
+    margin-top: 50px;
+    opacity: 0.2;
+}
+.main__aside.active #ustawienia {
+    opacity: 1;
+}
+#startGame {
+    display: block;
+    margin: 20px 0px;
+}
+.main__article:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: white;
+}
+
+.main__aside.active {
+    border: 1px solid;
+}
+
+.main__article.active:before {
+    z-index: -1;
+}
+
+.main__article.active #canvasOverlay {
+    display: none;
+}

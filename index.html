@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pl-PL" class="html">
+<head>
+	<meta charset="UTF-8">
+	<title>Snake DEMO</title>
+	<meta name="description" content="Recruitment Task">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="apple-mobile-web-app-status-bar-style" content="#57abe6">
+	<meta name="msapplication-TileColor" content="#57abe6">
+	<meta name="theme-color" content="#57abe6" >
+
+	<link rel="stylesheet" href="dist/style.min.css" >
+    <!--[if IE]>
+        <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+    <![endif]-->
+
+	<!--[if lt IE 9]>
+	<script src="static/js/html5shiv.js"></script>
+	<![endif]-->
+
+</head>
+
+<body class="body">
+	
+    <main class="main">
+		<article id="canvasContainer" class="main__article">
+				<canvas id="canvas" width="400" height="400">Your browser does not support canvas.</canvas>
+				<p class="active" id="canvasOverlay">Aby rozpocząć, ustaw parametry i kliknij ROZPOCZNIJ GRĘ!</p>
+				<span id="score">score: 0</span>&nbsp;<span id="level"></span>
+		</article>
+		<aside id="sidebar" class="main__aside active">
+
+			<p>Najlepsze wyniki:</p>
+			<ul id="wyniki">
+				Nie ma jeszcze żadnego wyniku
+			</ul>
+
+			<div id="ustawienia">
+			<b>Ustawienia gry:</b>
+			<label for="labirynt">Wybierz Labirynt:</label>
+			<select name="labirynt" id="labirynt" valu>
+				<option value="1" selected>1</option>
+				<option value="2">2</option>
+				<option value="3">3</option>
+				<option value="4">4</option>
+				<option value="5">5</option>
+			</select>
+			<label for="czas">Czas power-upów:</label>
+			<input type="number" name="czas" id="czas" value="1"/>
+			<label for="jednostka">Jednostka power-upów:</label>
+			<input type="number" name="jednostka" id="jednostka" value="1"/>
+			<label for="predkosc">Prędkość węża w ms:</label>
+			<input type="number" name="predkosc" id="predkosc" value="60"/>
+			<button id="startGame">ROZPOCZNIJ GRĘ!</button>
+			</div>
+
+
+		</aside>
+		
+    </main>
+
+<script defer src="dist/main.js"></script>
+</body>
+
+</html>
